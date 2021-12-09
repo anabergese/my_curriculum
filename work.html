@@ -37,10 +37,13 @@
   var myLandbot = new Landbot.Livechat({
     configUrl: 'https://chats.landbot.io/v3/H-1049233-KTYFWAZWDCW7RYE5/index.json',
   });
+</script>
+  <script>
+ 
    let url = new URL(window.location.href)
   let params = new URLSearchParams(url.search);
   let openLandbot = params.has("red") ? myLandbot.onLoad(function() {myLandbot.open()}) : null;
-</script>
+  </script>
   <script>
 var siteScope = window;
   siteScope.document.styleSheets[0].insertRule('.LandbotLivechat { left: 0px !important}'); //You can add this css rule in your site
