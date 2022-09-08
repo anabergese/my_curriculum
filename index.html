@@ -58,6 +58,18 @@
   var myLandbot = new Landbot.Livechat({
     configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1363575-0I2A4LXU792F8Z2J/index.json',
   });
+  let userOpened;
+function botOpen(){
+    if (document.getElementsByClassName('is-open')[0]){
+        userOpened = true;
+            console.log('is opened')
+            customData: { opened: 1}
+        }
+else {
+    setTimeout(botOpen, 2000);
+    }
+}
+botOpen();
 </script>
     
 <!-- Google Tag Manager (noscript) -->
