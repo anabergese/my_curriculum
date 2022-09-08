@@ -62,8 +62,9 @@
 function botOpen(){
     if (document.getElementsByClassName('is-open')[0]){
         userOpened = true;
-            console.log('is opened')
-            customData: { opened: "1"}
+            console.log('is opened', myLandbot);
+  
+      myLandbot.setCustomData({ opened: "1"})
         }
 else {
     setTimeout(botOpen, 2000);
