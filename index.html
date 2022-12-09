@@ -53,12 +53,11 @@
     <title>Meta title Alice</title>
   </head>
   <body>
+<script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
 <script>
-var head = document.head;
-var script = document.createElement('script');
-script.type = 'text/javascript';
-script.src = "https://183585.t.hyros.com/v1/lst/universal-script?ph=21b2c8845a66d09c855d477ba241369f929d16c4287e8251ed297ef76e80d625&tag=!clicked";
-head.appendChild(script);
+  var myLandbot = new Landbot.Livechat({
+    configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1426698-RHRLLYXL4YX6UVMQ/index.json',
+  });
 </script>
 
 <!-- Google Tag Manager (noscript) -->
