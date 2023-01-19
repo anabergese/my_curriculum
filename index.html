@@ -45,23 +45,29 @@
 </head>
 <body>
 <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            let checkMobile = (/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(navigator.userAgent)) ? true : addLandbot();        });        function addLandbot(){
-            var scriptstatic = document.createElement("script");
-                scriptstatic.src = "https://static.landbot.io/landbot-3/landbot-3.0.0.js";
-                  scriptstatic.onload = function() {
-                  var script = document.createElement("script");
-                  script.type = "text/javascript";
-                  var code = document.createTextNode(`
-                  var myLandbot = new Landbot.Livechat({
-                    configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1414567-Q9MT6FOPBK1IJFA6/index.json',
-                    });
-                    `);
-                    script.appendChild(code)
-                document.body.appendChild(script)
-                }
-            document.body.appendChild(scriptstatic)
-        }    </script>
+let checkMobile = (/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(navigator.userAgent));
+document.addEventListener('DOMContentLoaded', function() { checkMobile ? true : addLandbot() });            
+function addLandbot(){
+    var scriptstatic = document.createElement("script");
+    scriptstatic.src = "https://cdn.landbot.io/landbot-3/landbot-3.0.0.js";
+    scriptstatic.onload = function(){
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var code = document.createTextNode(`
+        var myLandbot = new Landbot.Livechat({
+            configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1344867-FJC1FYK5II5W1Y51/index.json',
+            });
+        `);
+        script.appendChild(code)
+        document.body.appendChild(script)
+    }
+    document.body.appendChild(scriptstatic)
+}   
+</script>        
+        
+
+  
+  
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXZTJSB"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
