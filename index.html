@@ -44,23 +44,24 @@
    <!-- End Google Tag Manager -->
 </head>
 <body>
-  <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
-  <div id="myLandbot" style="width: 100%; height: 500px"></div>
-  <script>
-    var myLandbot = new Landbot.Container({
-      container: '#myLandbot',
-      configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1508027-D3JGYDUUZ2QHOAW6/index.json',
+ <script>
+window.addEventListener('mouseover', initLandbot, { once: true });
+window.addEventListener('touchstart', initLandbot, { once: true });
+var myLandbot;
+function initLandbot() {
+  if (!myLandbot) {
+    var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+    s.addEventListener('load', function() {
+      var myLandbot = new Landbot.Livechat({
+        configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1529663-8F6LARI39SCB057J/index.json',
+      });
     });
-  </script>
-  <a href="https://landbot.pro/v3/H-1522947-N0YZDX0U6ZPSK02A/index.html">
-         Click Here to Redirect
-    </a>
-  <a href="https://landbot.pro/v3/H-1521180-K2QEH4DH5Z568AUE/index.html"  target="_blank">
-         Click Here to Redirect
-    </a>
-  <a href="https://landbot.pro/v3/H-1522187-2G8D6Q6K5SGMTI5C/index.html"  target="_blank">
-         Click Here to Redirect
-    </a>
+    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  }
+}
+</script>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXZTJSB"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
