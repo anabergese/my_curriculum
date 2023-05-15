@@ -62,16 +62,6 @@ function initLandbot() {
   }
 }
 </script>
-  <script>
-var siteScope = window;
-var landbotScope = this;
-  this.onLoad(function() {
-    var es= siteScope.document.getElementsByTagName("script")[0]
-    var ns = siteScope.document.createElement("script");
-    ns.text=`setTimeout(function(){myLandbot.hideProactive()},15000)`;
-    es.parentNode.insertBefore(ns,es)
-})
-</script>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXZTJSB"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
