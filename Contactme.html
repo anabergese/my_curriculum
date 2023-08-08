@@ -33,7 +33,7 @@
 </head>
 
 <body class=pagecontactme>
- <script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+ <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
  <script>
   let config;
   const deviceType = () => {
@@ -49,7 +49,8 @@
   return "desktop"; console.log("desktop");
   config = 'https://chats.landbot.io/v3/H-1120830-LJ8Z99122PJ33UXZ/index.json'; }
   }
-  ;console.log(deviceType());
+  ;
+   console.log(deviceType());
    
     var myLandbot = new Landbot.Livechat({
       configUrl: config,
