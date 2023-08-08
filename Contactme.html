@@ -33,29 +33,40 @@
 </head>
 
 <body class=pagecontactme>
- <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
- <script>
-  let config;
-  const deviceType = () => {
-  const ua = navigator.userAgent;
-  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) { console.log("tablet");
-  config = 'https://chats.landbot.io/v3/H-1120830-LJ8Z99122PJ33XX/index.json'; 
-  } 
-  else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-  return "mobile"; console.log("mobile"); 
-  config = 'https://chats.landbot.io/v3/H-1120830-LJ8Z99122PJ33UXY/index.json'; 
-  } 
-  else { 
-  return "desktop"; console.log("desktop");
-  config = 'https://chats.landbot.io/v3/H-1120830-LJ8Z99122PJ33UXZ/index.json'; }
-  }
-  ;
-   console.log(deviceType());
+    <script>
+    let config;
+    const deviceType = () => {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) { 
+    console.log("tablet");
+    config = 'https://storage.googleapis.com/chats.landbot.io/v3/H-1050357-O3B9L8WXCQC1H5SS/index.json'; 
+      return config;
+    } 
+    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+    console.log("mobile"); 
+    config = 'https://storage.googleapis.com/chats.landbot.io/v3/H-1050357-O3B9L8WXCQC1H5SS/index.json'; 
+      return config;
+    } 
+    else { 
    
+    console.log("desktop");
+    config = 'https://storage.googleapis.com/chats.landbot.io/v3/H-1072287-Z7WUW78TT9POJWF0/index.json'; 
+    return config;
+    }
+    }
+    ;
+     console.log(deviceType());
+  </script>
+  
+  <script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+  <script>
     var myLandbot = new Landbot.Livechat({
       configUrl: config,
     });
   </script>
+
+
+  
   <nav class="navbar navbar-expand-lg navbar-light rounded-pill">
     <a class="navbar-brand rounded-pill" href="index.html">Ana's Profile</a>
     <button class="navbar-toggler rounded-pill" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
