@@ -33,38 +33,45 @@
 </head>
   
 <body>
-<script>
+
+  <script>
 window.addEventListener('mouseover', initLandbot, { once: true });
 window.addEventListener('touchstart', initLandbot, { once: true });
 var myLandbot;
-function initLandbot() {
-  if (!myLandbot) {
-    var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
-    s.addEventListener('load', function() {
-      var myLandbot = new Landbot.Livechat({
-        configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1695868-BIDTTL1EDKEJW9NQ/index.json',
-      });
-    });
-    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
-    var x = document.getElementsByTagName('script')[0];
-    x.parentNode.insertBefore(s, x);
-  }
-}
+var botOpenCount = 0; // Initialize a counter variable
 
-  let userOpened;
-function botOpen(){
-    if (document.getElementsByClassName('is-open')[0]){
-        userOpened = true;
-            console.log('is opened')
-        }
-else {
-    setTimeout(botOpen, 2000);
-          userOpened = false;
-            console.log('is closed')
+function initLandbot() {
+    if (!myLandbot) {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.addEventListener('load', function() {
+            myLandbot = new Landbot.Popup({
+                configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1711567-O4ZOXZ69MLT9I04X/index.json',
+            });
+        });
+        s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
     }
 }
+
+let userOpened;
+function botOpen() {
+    if (document.getElementsByClassName('is-open')[0]) {
+        userOpened = true;
+        botOpenCount++; // Increment the counter when the bot is opened
+        console.log('is opened');
+        console.log('Bot opened ' + botOpenCount + ' times.');
+    } else {
+        setTimeout(botOpen, 2000);
+    }
+}
+
 botOpen();
 </script>
+
+  
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand rounded-pill" href="index.html">Ana's Profile</a>
     <button class="navbar-toggler rounded-pill" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
