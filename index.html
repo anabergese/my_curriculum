@@ -246,21 +246,21 @@ This site is entirely made with HTML, CSS, and JavaScript.  Also, I am exploring
         <p>© 2020 Ana Belén Bergese.</p>
       </div>
     </div>
+     <footer>
+      <p>Author: Hege Refsnes</p>
+      <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+      <script>
+        var myLandbot = new Landbot.Popup({
+          configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1704298-GDT2FVGIL9HQIFGG/index.json',
+        });
+        var buttonOpen = document.getElementById("openbot");
+         buttonOpen.addEventListener('click', (event) => {
+            event.preventDefault();
+            myLandbot.open()
+          });
+      </script>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="index.js" charset="utf-8"></script>
 </body>
-  <footer>
-  <p>Author: Hege Refsnes</p>
-  <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
-<script>
-  var myLandbot = new Landbot.Popup({
-    configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-1704298-GDT2FVGIL9HQIFGG/index.json',
-  });
-  var buttonOpen = document.getElementById("openbot");
-   buttonOpen.addEventListener('click', (event) => {
-      event.preventDefault();
-      myLandbot.open()
-    });
-</script>
-</footer>
 </html>
