@@ -2,14 +2,51 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Landbot | Convert a Landing Page into a Chatbot</title>
+    <title>Mutuelle Santé Sénior</title>
+    <style>
+      .loading-container {
+        text-align: center;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+      
+      .loading-animation img {
+        max-width: 40%;
+        height: auto;
+        margin: 20px 0;
+      }
+      
+      body{
+      background-color: #F1F2F9;
+      color: #2F324A;
+      }
+    </style>
   </head>
   <body>
-    <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+    <div class="loading-container">
+        <h1>Welcome</h1>
+        <!-- Animación de carga personalizada -->
+        <div class="loading-animation">
+            <img src="https://storage.googleapis.com/media.landbot.io/251823/chats/17935886-d81e-472d-a35b-83fdab5531f1/5N6F5XJG4LEIZED3MUE30UPD0IJPCADB.gif" alt="Cargando...">
+        </div>
+    </div>
     <script>
-      var myLandbot = new Landbot.Fullpage({
-        configUrl: 'https://storage.googleapis.com/chats.landbot.io/v3/H-1058934-GDUXRBIXOWFW38GZ/index.json',
-      });
+      window.addEventListener('mouseover', initLandbot, { once: true });
+      window.addEventListener('touchstart', initLandbot, { once: true });
+      var myLandbot;
+      function initLandbot() {
+        if (!myLandbot) {
+          var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+          s.addEventListener('load', function() {
+            var myLandbot = new Landbot.Fullpage({
+              configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-2576961-L85K0HCCOA5OACBK/index.json',
+            });
+          });
+          s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        }
+      }
     </script>
   </body>
 </html>
