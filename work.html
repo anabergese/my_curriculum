@@ -34,6 +34,25 @@
     configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-2589926-EETHALACLYZMZ6G4/index.json',
   });
 </script>
+<script>
+myLandbot.onLoad(function() {
+// Get the current URL
+var currentUrl = window.location.href;
+
+// Define an array of URLs that should trigger the bot to open automatically
+var openBotUrls = [
+"https://anabergese.github.io/my_curriculum/index.html",
+"https://anabergese.github.io/my_curriculum/Contactme.html",
+// Add more URLs as needed
+];
+
+// Check if the current URL is in the list of URLs to open the bot
+if (openBotUrls.includes(currentUrl)) {
+// Open the chatbot automatically
+myLandbot.open();
+}
+});
+</script>
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand rounded-pill" href="index.html">Ana's Profile</a>
     <button class="navbar-toggler rounded-pill" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
