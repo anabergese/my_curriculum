@@ -65,6 +65,30 @@ End Google Tag Manager (noscript)
   }
   }
   </script>
+  <div id="LandbotOptin__Container" style="width: 405px; height: 266px;"></div>
+<script src="https://static.landbot.io/whatsapp-optin/whatsapp-optin.js"></script>
+<script>
+var landbotOptin = new Landbot.Optin({
+    "url": "https://messages.landbot.io/wa/W-1324-AP6GL03PCBT2RRVV/opt_in",
+    "label": "testing",
+    "customParams": {
+        "header": {
+            "params": []
+        },
+        "body": {
+            "params": []
+        },
+        "buttons": [
+            {
+                "params": [
+                    "23"
+                ]
+            }
+        ]
+    },
+    "container": "#LandbotOptin__Container"
+});
+</script>
   <nav class="navbar navbar-expand-lg navbar-light rounded-pill">
     <a class="navbar-brand rounded-pill" href="index.html">Ana's Profile</a>
     <button class="navbar-toggler rounded-pill" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
