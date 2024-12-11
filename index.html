@@ -18,6 +18,9 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
 <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -40,17 +43,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Start FB Pixel  --->
 <script> !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '950474721979046'); fbq('track', 'PageView'); </script> <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=950474721979046&ev=PageView&noscript=1" /></noscript>
 <!-- End FB Pixel  --->
-<script>
-    // Capturar el parámetro 'Ink' de la URL al cargar la página
-    window.onload = function () {
-      var url = new URL(window.location.href); // Obtenemos la URL actual
-      var inkParam = url.searchParams.get('Ink'); // Capturamos el parámetro 'Ink'
-      console.log("Ink:", inkParam); // Mostramos el valor en la consola
-
-      // Aquí puedes agregar cualquier lógica adicional para usar 'inkParam'
-    }; // Cierre de la función window.onload
-</script>
-
 </head>
 <body>
  <!-- Google Tag Manager (noscript)  
@@ -58,15 +50,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 End Google Tag Manager (noscript) 
   <!-- Hotjar Tracking Code  --->
-<div id="LandbotOptin__Container" style="width: 405px; height: 266px;"></div>
-<script src="https://static.landbot.io/whatsapp-optin/whatsapp-optin.js"></script>
+<script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
 <script>
-var landbotOptin = new Landbot.Optin({
-    "url": "https://messages.landbot.io/wa/W-1324-AP6GL03PCBT2RRVV/opt_in",
-    "label": "testing",
-    "customParams": null,
-    "container": "#LandbotOptin__Container"
-});
+  var myLandbot = new Landbot.Livechat({
+    configUrl: 'https://storage.googleapis.com/landbot.pro/v3/H-2715976-DGSYLY6XQV6QS4JI/index.json',
+  });
 </script>
 
 
